@@ -1916,10 +1916,11 @@ section,
 .testimonials .swiper-button-next:hover::after {
   color: var(--contrast-color);
 }
-
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
+/* Filters Styling */
 .portfolio .portfolio-filters {
   display: flex;
   justify-content: center;
@@ -1964,23 +1965,15 @@ section,
   color: var(--contrast-color);
 }
 
-@media (max-width: 768px) {
-  .portfolio .portfolio-filters {
-    gap: 10px;
-  }
-
-  .portfolio .portfolio-filters li {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
-}
-
+/* Portfolio Items */
 .portfolio .portfolio-entry {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   background: var(--surface-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 0;
 }
 
 .portfolio .portfolio-entry .entry-image {
@@ -1988,8 +1981,10 @@ section,
   margin: 0;
   overflow: hidden;
   aspect-ratio: 16/9;
+  padding: 0;
 }
 
+/* Image Transition */
 .portfolio .portfolio-entry .entry-image img {
   width: 100%;
   height: 100%;
@@ -1997,13 +1992,14 @@ section,
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Overlay */
 .portfolio .portfolio-entry .entry-image .entry-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
   display: flex;
   align-items: flex-end;
-  padding: 30px;
+  padding: 15px 20px 10px; /* Reduced bottom padding */
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2021,50 +2017,17 @@ section,
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
   color: var(--contrast-color);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0;
 }
 
-.portfolio .portfolio-entry .entry-image .entry-overlay .entry-links {
-  display: flex;
-  gap: 15px;
-}
-
-.portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a {
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface-color);
-  color: var(--accent-color);
-  border-radius: 12px;
-  font-size: 20px;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  transform: translateY(-2px);
-}
-
-.portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
+/* Hover Effects */
 .portfolio .portfolio-entry:hover .entry-image img {
   transform: scale(1.05);
 }
@@ -2074,42 +2037,31 @@ section,
   transform: translateY(0);
 }
 
-.portfolio .portfolio-entry:hover .entry-image .entry-overlay .overlay-content {
+.portfolio .portfolio-entry:hover .entry-image .overlay-content {
   transform: translateY(0);
 }
 
-.portfolio .portfolio-entry:hover .entry-image .entry-overlay .entry-links a {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Responsive Fixes */
 @media (max-width: 768px) {
+  .portfolio .portfolio-filters {
+    gap: 10px;
+  }
+
+  .portfolio .portfolio-filters li {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
   .portfolio .portfolio-entry .entry-image .entry-overlay {
-    padding: 20px;
+    padding: 12px;
   }
 
-  .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a {
-    width: 40px;
-    height: 40px;
+  .portfolio .portfolio-entry .entry-image .entry-title {
     font-size: 18px;
   }
 }
 
-.portfolio .portfolio-item .entry-image {
-  aspect-ratio: 4/3;
-}
-
-@media (min-width: 1200px) {
-  .portfolio .portfolio-item .entry-title {
-    font-size: 20px;
-  }
-}
-
+/* Gutter Fix */
 @media (min-width: 768px) {
   .portfolio .row {
     margin-left: -10px;
@@ -2144,23 +2096,9 @@ section,
     padding-left: 15px;
     padding-right: 15px;
   }
-}
 
-@media (min-width: 1200px) {
-  .portfolio .entry-overlay {
-    padding: 25px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .portfolio .entry-overlay {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 991px) {
-  .portfolio .entry-overlay {
-    padding: 20px;
+  .portfolio .portfolio-item .entry-title {
+    font-size: 20px;
   }
 }
 
@@ -3775,4 +3713,8 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+#contact {
+  padding-top: 40px;
 }

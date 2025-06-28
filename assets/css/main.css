@@ -12,15 +12,40 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito Sans",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito Sans", sans-serif;
+  --nav-font: "Raleway", sans-serif;
+}
+.yt-embed-holder {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  margin-bottom: 0;
+}
+.yt-embed-holder iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+  pointer-events: none;
+  display: block;
+  border-radius: 0;
+}
+.portfolio-entry .entry-image {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #031119; /* Background color for the entire website, including individual sections */
-  --default-color: rgba(255, 255, 255, 0.8); /* Default color used for the majority of the text content across the entire website */
+  --default-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #e0e9f2; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e3a127; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #1b262c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -29,11 +54,21 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* The default color of the main navmenu links */
   --nav-hover-color: #e3a127; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: rgba(255, 255, 255, 0.8); /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #e3a127; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -266,7 +301,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -305,11 +340,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -321,7 +356,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -424,7 +459,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -451,7 +486,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -469,7 +504,8 @@ h6 {
 
 .footer .footer-top {
   padding-top: 50px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-about .logo {
@@ -675,7 +711,13 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
   z-index: 1;
 }
 
@@ -696,11 +738,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -720,7 +762,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -786,7 +827,13 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
   z-index: 1;
 }
 
@@ -1168,7 +1215,11 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .testimonial-section .testimonial-intro .swiper-nav-buttons button:hover {
+.about
+  .testimonial-section
+  .testimonial-intro
+  .swiper-nav-buttons
+  button:hover {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
@@ -1792,7 +1843,6 @@ section,
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -2615,7 +2665,7 @@ section,
   top: 28px;
 }
 
-.contact .contact-form-wrapper .form-group .input-with-icon textarea+i {
+.contact .contact-form-wrapper .form-group .input-with-icon textarea + i {
   top: 25px;
   transform: none;
 }
@@ -2630,16 +2680,29 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .contact-form-wrapper .form-group .input-with-icon .form-control:focus {
+.contact
+  .contact-form-wrapper
+  .form-group
+  .input-with-icon
+  .form-control:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
+  box-shadow: 0 0 0 0.25rem
+    color-mix(in srgb, var(--accent-color), transparent 90%);
 }
 
-.contact .contact-form-wrapper .form-group .input-with-icon .form-control::placeholder {
+.contact
+  .contact-form-wrapper
+  .form-group
+  .input-with-icon
+  .form-control::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.contact .contact-form-wrapper .form-group .input-with-icon textarea.form-control {
+.contact
+  .contact-form-wrapper
+  .form-group
+  .input-with-icon
+  textarea.form-control {
   height: 180px;
   resize: none;
   padding-top: 15px;
@@ -2655,18 +2718,21 @@ section,
   letter-spacing: 1px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 5px 15px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .contact .contact-form-wrapper .btn-submit:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 8px 20px
+    color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .contact .contact-form-wrapper .btn-submit:active {
   transform: translateY(0);
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 3px 10px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .contact .contact-form-wrapper .loading,
@@ -2744,22 +2810,42 @@ section,
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-wrapper {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-wrapper {
   height: auto !important;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-slide img {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-slide
+  img {
   aspect-ratio: 3/2;
   object-fit: cover;
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev {
   background-color: var(--contrast-color);
   width: 40px;
   height: 40px;
@@ -2767,20 +2853,44 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:after,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:after {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:after,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:after {
   font-size: 16px;
   color: var(--accent-color);
   font-weight: bold;
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:hover,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:hover {
   background-color: var(--accent-color);
 }
 
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover:after,
-.portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover:after {
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-next:hover:after,
+.portfolio-details
+  .portfolio-details-media
+  .main-image
+  .portfolio-details-slider
+  .swiper-button-prev:hover:after {
   color: var(--contrast-color);
 }
 
@@ -2835,7 +2945,11 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-meta .badge-wrapper .project-badge {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .badge-wrapper
+  .project-badge {
   display: inline-block;
   padding: 8px 16px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -2850,14 +2964,23 @@ section,
   gap: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-meta .date-client .meta-item {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .date-client
+  .meta-item {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.portfolio-details .portfolio-details-content .project-meta .date-client .meta-item i {
+.portfolio-details
+  .portfolio-details-content
+  .project-meta
+  .date-client
+  .meta-item
+  i {
   margin-right: 6px;
   color: var(--accent-color);
 }
@@ -2902,13 +3025,23 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item {
   border: none;
   background: none;
   margin-bottom: 10px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button {
   padding: 1rem;
   font-weight: 600;
   font-size: 1rem;
@@ -2918,7 +3051,13 @@ section,
   box-shadow: none;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button:not(.collapsed) {
   background-color: var(--surface-color);
   color: var(--accent-color);
   border-bottom-left-radius: 0 !important;
@@ -2926,28 +3065,59 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) i {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button:not(.collapsed)
+  i {
   color: var(--accent-color);
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button::after {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button::after {
   background-size: 14px;
   width: 14px;
   height: 14px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button i {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-header
+  .accordion-button
+  i {
   font-size: 1.1rem;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-body {
   padding: 1rem;
   background-color: var(--surface-color);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body p {
+.portfolio-details
+  .portfolio-details-content
+  .project-overview
+  .project-accordion
+  .accordion-item
+  .accordion-body
+  p {
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
   line-height: 1.6;
@@ -2975,7 +3145,11 @@ section,
   padding-left: 0;
 }
 
-.portfolio-details .portfolio-details-content .project-features .feature-list li {
+.portfolio-details
+  .portfolio-details-content
+  .project-features
+  .feature-list
+  li {
   display: flex;
   align-items: center;
   padding: 8px 0;
@@ -2983,7 +3157,12 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
-.portfolio-details .portfolio-details-content .project-features .feature-list li i {
+.portfolio-details
+  .portfolio-details-content
+  .project-features
+  .feature-list
+  li
+  i {
   color: var(--accent-color);
   margin-right: 10px;
   font-size: 1.1em;
@@ -3005,7 +3184,10 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-view-project:hover {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-view-project:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 15%);
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -3027,11 +3209,18 @@ section,
   transition: transform 0.3s ease;
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-next-project:hover {
   background-color: color-mix(in srgb, var(--heading-color), transparent 80%);
 }
 
-.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover i {
+.portfolio-details
+  .portfolio-details-content
+  .cta-buttons
+  .btn-next-project:hover
+  i {
   transform: translateX(3px);
 }
 
@@ -3133,7 +3322,8 @@ section,
 }
 
 .service-details .service-tabs .nav-tabs {
-  border-bottom: 2px solid color-mix(in srgb, var(--heading-color), transparent 90%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--heading-color), transparent 90%);
   margin-bottom: 30px;
 }
 
@@ -3224,11 +3414,20 @@ section,
   padding-bottom: 35px;
 }
 
-.service-details .service-tabs .tab-content .process-timeline .timeline-item:last-child {
+.service-details
+  .service-tabs
+  .tab-content
+  .process-timeline
+  .timeline-item:last-child {
   padding-bottom: 0;
 }
 
-.service-details .service-tabs .tab-content .process-timeline .timeline-item .timeline-marker {
+.service-details
+  .service-tabs
+  .tab-content
+  .process-timeline
+  .timeline-item
+  .timeline-marker {
   position: absolute;
   left: -30px;
   top: -5px;
@@ -3245,17 +3444,34 @@ section,
   z-index: 2;
 }
 
-.service-details .service-tabs .tab-content .process-timeline .timeline-item .timeline-content {
+.service-details
+  .service-tabs
+  .tab-content
+  .process-timeline
+  .timeline-item
+  .timeline-content {
   padding-left: 10px;
 }
 
-.service-details .service-tabs .tab-content .process-timeline .timeline-item .timeline-content h4 {
+.service-details
+  .service-tabs
+  .tab-content
+  .process-timeline
+  .timeline-item
+  .timeline-content
+  h4 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.service-details .service-tabs .tab-content .process-timeline .timeline-item .timeline-content p {
+.service-details
+  .service-tabs
+  .tab-content
+  .process-timeline
+  .timeline-item
+  .timeline-content
+  p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1.6;
 }
@@ -3299,7 +3515,12 @@ section,
   background-color: var(--accent-color);
 }
 
-.service-details .service-tabs .tab-content .benefit-card:hover .benefit-icon i {
+.service-details
+  .service-tabs
+  .tab-content
+  .benefit-card:hover
+  .benefit-icon
+  i {
   color: var(--contrast-color);
 }
 
@@ -3350,7 +3571,11 @@ section,
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.service-details .service-gallery .service-details-slider .portfolio-item:hover .portfolio-info {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .portfolio-item:hover
+  .portfolio-info {
   opacity: 1;
   transform: translateY(0);
 }
@@ -3360,12 +3585,20 @@ section,
   transition: all 0.4s ease;
 }
 
-.service-details .service-gallery .service-details-slider .portfolio-item .portfolio-info {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .portfolio-item
+  .portfolio-info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   padding: 30px 20px 20px;
   opacity: 0;
   transform: translateY(20px);
@@ -3374,13 +3607,23 @@ section,
   border-bottom-right-radius: 12px;
 }
 
-.service-details .service-gallery .service-details-slider .portfolio-item .portfolio-info h5 {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .portfolio-item
+  .portfolio-info
+  h5 {
   color: var(--contrast-color);
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-.service-details .service-gallery .service-details-slider .portfolio-item .portfolio-info p {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .portfolio-item
+  .portfolio-info
+  p {
   color: color-mix(in srgb, var(--contrast-color), transparent 20%);
   margin: 0;
   font-size: 14px;
@@ -3391,14 +3634,22 @@ section,
   bottom: 0;
 }
 
-.service-details .service-gallery .service-details-slider .swiper-pagination .swiper-pagination-bullet {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 70%);
   opacity: 1;
 }
 
-.service-details .service-gallery .service-details-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.service-details
+  .service-gallery
+  .service-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 25px;
   border-radius: 5px;
   background-color: var(--accent-color);
@@ -3410,7 +3661,11 @@ section,
 }
 
 .service-details .service-sidebar .action-card {
-  background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), black 20%) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), black 20%) 100%
+  );
   border-radius: 15px;
   padding: 35px 30px;
   color: var(--contrast-color);
@@ -3497,7 +3752,8 @@ section,
   font-weight: 700;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 2px solid color-mix(in srgb, var(--heading-color), transparent 90%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--heading-color), transparent 90%);
 }
 
 .service-details .service-sidebar .service-features-list ul {
@@ -3567,12 +3823,21 @@ section,
   opacity: 0.3;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header .rating {
+.service-details
+  .service-sidebar
+  .testimonial-card
+  .testimonial-header
+  .rating {
   display: flex;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header .rating i {
-  color: #FFD700;
+.service-details
+  .service-sidebar
+  .testimonial-card
+  .testimonial-header
+  .rating
+  i {
+  color: #ffd700;
   font-size: 16px;
   opacity: 1;
   margin-left: 2px;
@@ -3598,13 +3863,23 @@ section,
   margin-right: 15px;
 }
 
-.service-details .service-sidebar .testimonial-card .client-info .client-details h5 {
+.service-details
+  .service-sidebar
+  .testimonial-card
+  .client-info
+  .client-details
+  h5 {
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 5px;
 }
 
-.service-details .service-sidebar .testimonial-card .client-info .client-details span {
+.service-details
+  .service-sidebar
+  .testimonial-card
+  .client-info
+  .client-details
+  span {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }

@@ -18,25 +18,6 @@
   --heading-font: "Nunito Sans", sans-serif;
   --nav-font: "Raleway", sans-serif;
 }
-.yt-embed-holder {
-  width: 100%;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-  margin-bottom: 0;
-}
-.yt-embed-holder iframe {
-  width: 300%;
-  height: 100%;
-  margin-left: -100%;
-  pointer-events: none;
-  display: block;
-  border-radius: 0;
-}
-.portfolio-entry .entry-image {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-/* yt padding fix */
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {

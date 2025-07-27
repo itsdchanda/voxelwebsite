@@ -19,6 +19,50 @@
   --nav-font: "Raleway", sans-serif;
 }
 
+/* ================================
+   Custom Portfolio & Embed Styles
+   ================================ */
+
+/* YouTube Embed Holder */
+.yt-embed-holder {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  margin-bottom: 0;
+}
+
+.yt-embed-holder iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+  pointer-events: none;
+  display: block;
+  border-radius: 0;
+}
+
+/* Portfolio Entry Image Padding Fix */
+.portfolio-entry .entry-image {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.voxel-tagline {
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.voxel-highlight {
+  color: #e3a127; /* Yellow */
+  font-weight: 700;
+  transition: text-shadow 0.3s ease;
+}
+
+.voxel-highlight:hover {
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  cursor: pointer;
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #031119; /* Background color for the entire website, including individual sections */
